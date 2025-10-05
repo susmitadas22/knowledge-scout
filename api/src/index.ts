@@ -9,7 +9,7 @@ import { connectToMongo } from "./lib";
 const main = async () => {
   await connectToMongo();
   serve({ fetch: app.fetch, port: env.HTTP_PORT });
-  console.log(`app listening on port ${env.HTTP_PORT}`);
+  console.log(`Server is running on http://localhost:${env.HTTP_PORT}`);
 };
 
 main();
