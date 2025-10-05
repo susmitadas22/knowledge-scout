@@ -1,0 +1,19 @@
+{
+  "name": "knowledge-scout",
+  "version": "0.1.0",
+  "scripts": {
+    "watch": "pnpm run -r watch",
+    "build:packages": "pnpm --filter @knowledgescout/schemas build",
+    "build": "pnpm run build:packages && pnpm --filter @knowledgescout/api build && pnpm --filter @knowledgescout/www build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susmitadas22/knowledge-sout.git"
+  },
+  "author": "susmitadas9639@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/susmitadas22/knowledge-sout/issues"
+  },
+  "homepage": "https://github.com/susmitadas22/knowledge-sout#readme"
+}
