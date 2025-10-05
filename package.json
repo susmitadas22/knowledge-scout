@@ -4,7 +4,7 @@
   "scripts": {
     "watch": "pnpm run -r watch",
     "build:packages": "pnpm --filter @knowledgescout/schemas build",
-    "build": "pnpm run build:packages && pnpm --filter @knowledgescout/api build && pnpm --filter @knowledgescout/www build"
+    "build": "pnpm run build:packages && pnpm --filter @knowledgescout/api build"
   },
   "repository": {
     "type": "git",
