@@ -6,9 +6,47 @@
 
 The system supports PDF-only document uploads, extracting text and generating embeddings using the Xenova/all-MiniLM-L6-v2 model. These embeddings and metadata are stored in MongoDB, leveraging the vector-search index for efficient similarity searches. When users submit queries, the system generates embeddings and creates a queryHash to check the cache. If a cached answer exists, it's returned immediately; otherwise, a similarity search retrieves relevant document snippets from MongoDB, and the result is cached for future use. Authentication is implemented through basic user management and shared token validation via the x-shared-token header. Rate limiting prevents abuse using an in-memory map that tracks request counts per user, with the x-rate-limit header informing users of their status. Pagination support enables efficient listing of documents and queries. The database design includes four schemas: User schema stores credentials and metadata, Document schema contains metadata and references to chunks, Chunk schema holds text snippets with embeddings and parent document references, and QueryCache schema stores query hashes with their corresponding answers for efficient caching.
 
+[![KnowledgeScout Logo](./image.png)](./image.png)
+
 ---
 
 Tech Stack: Hono, MongoDB, Mongoose, pdf-parse, Xenova/all-MiniLM-L6-v2
+
+### Core Features:
+
+- User Authentication & Management
+- PDF Document Upload & Text Extraction
+- Text Embedding Generation using Xenova/all-MiniLM-L6-v2
+- Vector Search Indexing in MongoDB
+- Query Handling with Similarity Search & Caching
+- Rate Limiting & Pagination Support
+
+### Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+    cd knowledge-scout
+   ```
+2. **Install Dependencies:**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory and refer to `.env.example` for required variables.
+
+4. **Build the package:**
+
+   ```bash
+   pnpm build:packages
+   ```
+
+5. **Start the Application:**
+   ```bash
+   pnpm watch
+   ```
 
 ### Authentication
 
