@@ -518,14 +518,6 @@ ui.get("/", (c) => {
                     </div>
                     <p class="endpoint-desc">API metadata information</p>
                 </div>
-
-                <div class="endpoint">
-                    <div class="endpoint-header">
-                        <span class="method get">GET</span>
-                        <span class="endpoint-path">/.well-known/hackathon.json</span>
-                    </div>
-                    <p class="endpoint-desc">Hackathon project metadata</p>
-                </div>
             </div>
         </div>
     </div>

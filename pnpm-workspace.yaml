@@ -1,8 +1,9 @@
 packages:
-  - "api"
-  - "schemas"
+  - api
+  - schemas
 
 onlyBuiltDependencies:
-  - "@tailwindcss/oxide"
+  - '@tailwindcss/oxide'
   - esbuild
+  - protobufjs
   - sharp

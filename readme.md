@@ -75,6 +75,3 @@ Test Credentials:
 
 - GET /api/\_meta
   API metadata information
-
-- GET /.well-known/hackathon.json
-  Hackathon project metadata
